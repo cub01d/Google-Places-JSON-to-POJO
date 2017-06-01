@@ -1,5 +1,5 @@
 
-package com.example;
+package com.example.Nearby;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;

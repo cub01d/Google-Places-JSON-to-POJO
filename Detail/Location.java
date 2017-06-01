@@ -1,10 +1,10 @@
 
-package com.example;
+package com.example.Detail;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Northeast {
+public class Location {
 
     @SerializedName("lat")
     @Expose

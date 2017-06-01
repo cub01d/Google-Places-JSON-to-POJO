@@ -1,5 +1,5 @@
 
-package com.example;
+package com.example.Detail;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;
@@ -7,6 +7,15 @@ import com.google.gson.annotations.SerializedName;
 
 public class Result {
 
+    @SerializedName("address_components")
+    @Expose
+    private List<AddressComponent> addressComponents = null;
+    @SerializedName("adr_address")
+    @Expose
+    private String adrAddress;
+    @SerializedName("formatted_address")
+    @Expose
+    private String formattedAddress;
     @SerializedName("geometry")
     @Expose
     private Geometry geometry;
@@ -34,18 +43,39 @@ public class Result {
     @SerializedName("types")
     @Expose
     private List<String> types = null;
+    @SerializedName("url")
+    @Expose
+    private String url;
+    @SerializedName("utc_offset")
+    @Expose
+    private Integer utcOffset;
     @SerializedName("vicinity")
     @Expose
     private String vicinity;
-    @SerializedName("rating")
-    @Expose
-    private Integer rating;
-    @SerializedName("opening_hours")
-    @Expose
-    private OpeningHours openingHours;
-    @SerializedName("price_level")
-    @Expose
-    private Integer priceLevel;
+
+    public List<AddressComponent> getAddressComponents() {
+        return addressComponents;
+    }
+
+    public void setAddressComponents(List<AddressComponent> addressComponents) {
+        this.addressComponents = addressComponents;
+    }
+
+    public String getAdrAddress() {
+        return adrAddress;
+    }
+
+    public void setAdrAddress(String adrAddress) {
+        this.adrAddress = adrAddress;
+    }
+
+    public String getFormattedAddress() {
+        return formattedAddress;
+    }
+
+    public void setFormattedAddress(String formattedAddress) {
+        this.formattedAddress = formattedAddress;
+    }
 
     public Geometry getGeometry() {
         return geometry;
@@ -119,36 +149,28 @@ public class Result {
         this.types = types;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public Integer getUtcOffset() {
+        return utcOffset;
+    }
+
+    public void setUtcOffset(Integer utcOffset) {
+        this.utcOffset = utcOffset;
+    }
+
     public String getVicinity() {
         return vicinity;
     }
 
     public void setVicinity(String vicinity) {
         this.vicinity = vicinity;
-    }
-
-    public Integer getRating() {
-        return rating;
-    }
-
-    public void setRating(Integer rating) {
-        this.rating = rating;
-    }
-
-    public OpeningHours getOpeningHours() {
-        return openingHours;
-    }
-
-    public void setOpeningHours(OpeningHours openingHours) {
-        this.openingHours = openingHours;
-    }
-
-    public Integer getPriceLevel() {
-        return priceLevel;
-    }
-
-    public void setPriceLevel(Integer priceLevel) {
-        this.priceLevel = priceLevel;
     }
 
 }
