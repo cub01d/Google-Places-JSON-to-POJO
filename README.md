@@ -3,6 +3,8 @@
 Google Places JSON to Java Object, for use with GSON Parser for Android.
 
 Made with http://www.jsonschema2pojo.org/
+
+**!!NOTICE!!:** You should probably be using [Retrofit](http://square.github.io/retrofit/) instead for parsing REST API JSON to POJO. Regardless, I'm keeping this project up. :)
 ## Motivation
 
 Making your own Java classes manually for GSON to parse correctly sucks. I used **jsonschema2pojo** to generate the classes necessary for parsing with GSON, and created the classes you need for parsing JSON data from Google Places here.
@@ -37,3 +39,4 @@ You will need to get the query string with an HTTP request. This can be done wit
   * Volley - https://developer.android.com/training/volley/index.html
   * Retrofit - http://square.github.io/retrofit/
   * OkHttp - http://square.github.io/okhttp/
+  * [CodePath guide on using Retrofit](https://github.com/codepath/android_guides/wiki/Consuming-APIs-with-Retrofit)
